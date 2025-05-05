@@ -1,0 +1,158 @@
+/* styles.css */
+
+:root {
+  --bg: #000000;
+  --text: #e0e0e0;
+  --accent: #ff2e63;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: lowercase;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 1000;
+  transition: padding 0.3s ease, background 0.3s ease;
+}
+
+header.scrolled {
+  padding: 0.5rem 2rem;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+header nav {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+main,
+section {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+ul.awards {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+ul.awards li {
+  margin-bottom: 0.5rem;
+}
+
+.video-block {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.video-block video {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0.5rem auto 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* landing page styles */
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg);
+  padding: 4rem 2rem 2rem;
+}
+
+.landing h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.landing p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.about-info {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all list items horizontally */
+  text-align: center; /* centers text inside the li */
+}
+
+.about-info li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.about-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+}
